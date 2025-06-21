@@ -1,0 +1,41 @@
+.toolbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1117; // scuro, tech vibe
+  padding: 0 1rem;
+  font-family: 'Roboto Mono', monospace;
+
+  .brand-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #58a6ff;
+    text-decoration: none;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .desktop-links a {
+    color: white;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-links {
+      display: none;
+    }
+
+    .menu-button {
+      display: block;
+      color: white;
+    }
+
+    .brand-link {
+      font-size: 1rem;
+    }
+  }
+}

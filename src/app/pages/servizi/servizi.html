@@ -1,0 +1,13 @@
+<section class="servizi-section">
+  <h1>I miei servizi</h1>
+  <div class="servizi-grid">
+    <mat-card *ngFor="let servizio of servizi" class="servizio-card">
+      <mat-icon class="icon">{{ servizio.icon }}</mat-icon>
+      <h2>{{ servizio.title }}</h2>
+      <p>{{ servizio.description }}</p>
+    </mat-card>
+  </div>
+</section>
+
+<app-why-choose-me></app-why-choose-me>
+<app-quote-box></app-quote-box>

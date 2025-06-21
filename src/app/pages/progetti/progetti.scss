@@ -1,0 +1,32 @@
+/* progetti.component.scss */
+.progetti-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.progetti-card {
+  background-color: #f5f8fa;
+  color: #1c1c1c;
+}
+
+.newsletter-section {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e8f0fe;
+  border-radius: 12px;
+}
+
+.newsletter-section h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+button[mat-raised-button] {
+  margin-top: 1rem;
+  font-weight: 600;
+}

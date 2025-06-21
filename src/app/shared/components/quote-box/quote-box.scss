@@ -1,0 +1,59 @@
+.quote-box {
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  max-width: 800px;
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  border-radius: 16px;
+  color: #e0e0e0;
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0.5rem rgba(0, 255, 255, 0.1),
+    0 0 1rem rgba(0, 255, 255, 0.2),
+    0 0 2rem rgba(0, 255, 255, 0.25);
+
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow:
+      0 0 1rem rgba(0, 255, 255, 0.2),
+      0 0 2rem rgba(0, 255, 255, 0.35),
+      0 0 4rem rgba(0, 255, 255, 0.45);
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    opacity: 0.2;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+
+    strong {
+      color: #00ffff;
+      font-weight: 600;
+    }
+
+    em {
+      display: block;
+      margin-top: 0.8rem;
+      color: #b0b0b0;
+      font-style: italic;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.2rem;
+    .quote-text {
+      font-size: 1rem;
+    }
+  }
+}

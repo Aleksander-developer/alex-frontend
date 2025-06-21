@@ -1,0 +1,79 @@
+.contatti-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #0d47a1; /* blu scuro tech */
+  color: #e3f2fd; /* azzurro chiaro */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.4);
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto Mono', monospace; /* vibe nerd */
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+
+  form.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    mat-form-field {
+      width: 100%;
+      background: #1565c0; /* blu medio */
+      border-radius: 8px;
+
+      input, textarea {
+        color: #e3f2fd;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      .mat-form-field-label {
+        color: #bbdefb !important;
+      }
+
+      .mat-error {
+        font-size: 0.85rem;
+        color: #ff5252; /* rosso error */
+        font-family: 'Roboto Mono', monospace;
+      }
+    }
+
+    button {
+      align-self: center;
+      width: 140px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      font-family: 'Roboto Mono', monospace;
+      box-shadow: 0 5px 15px rgba(21, 101, 192, 0.5);
+      transition: background-color 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: #003c8f;
+        box-shadow: 0 8px 25px rgba(0, 60, 143, 0.8);
+      }
+
+      &:disabled {
+        background-color: #4f83cc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contatti-container {
+    margin: 1rem;
+    padding: 1.5rem;
+
+    form.contact-form {
+      gap: 1rem;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

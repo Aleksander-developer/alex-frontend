@@ -1,0 +1,70 @@
+.main-content {
+  background-image: url('../assets/sfondo.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 64px); /* 64px è l’altezza tipica della mat-toolbar */
+  padding: 2rem;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 100;
+  background-color: rgb(255, 0, 213);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .material-icons {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background-color: #e000b5;
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 0, 213, 0.3);
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+}
+
+// 📲 Smartphone (≤600px)
+@media (max-width: 600px) {
+  .scroll-to-top {
+    bottom: 90px;
+    right: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+// 📲 Tablet (601px – 1024px)
+@media (max-width: 1024px) and (min-width: 601px) {
+  .scroll-to-top {
+    bottom: 90px;
+    right: 18px;
+    padding: 0.7rem 0.9rem;
+    font-size: 1.1rem;
+  }
+}

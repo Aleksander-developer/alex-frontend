@@ -1,0 +1,30 @@
+<section class="project-detail mat-elevation-z4" *ngIf="progettoData; else noData">
+  <h1>{{ progettoData.title }}</h1>
+  <img [src]="progettoData.image" [alt]="progettoData.title" class="project-image" />
+  <p class="description">{{ progettoData.description }}</p>
+
+  <h3>Dettagli del progetto</h3>
+  <p class="dettagli">{{ progettoData.dettagli }}</p>
+
+  <h3>Tecnologie utilizzate</h3>
+  <div class="chip-container" aria-label="Tecnologie usate">
+  <span class="chip" *ngFor="let tech of progettoData.techStack">{{ tech }}</span>
+</div>
+
+
+  <div class="links">
+    <a *ngIf="progettoData.liveUrl" mat-raised-button color="accent" href="{{ progettoData.liveUrl }}" target="_blank" rel="noopener">
+      Vai al progetto
+    </a>
+    <a *ngIf="progettoData.repoUrl" mat-stroked-button color="primary" href="{{ progettoData.repoUrl }}" target="_blank" rel="noopener">
+      Codice sorgente
+    </a>
+  </div>
+
+  <button mat-button routerLink="/progetti" class="back-button">← Torna ai Progetti</button>
+</section>
+
+<ng-template #noData>
+  <p>Progetto non trovato.</p>
+  <button mat-button routerLink="/progetti" class="back-button">← Torna ai Progetti</button>
+</ng-template>

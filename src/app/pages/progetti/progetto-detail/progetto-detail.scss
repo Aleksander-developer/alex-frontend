@@ -1,0 +1,93 @@
+.project-detail {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 20px;
+    color: #0d47a1; // blu tech profondo
+  }
+
+  .project-image {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .description,
+  .dettagli {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.15rem;
+    color: #212121;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-family: 'Fira Code', monospace;
+    color: #1565c0;
+    margin-bottom: 12px;
+  }
+
+  // Chips personalizzati
+  .chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .chip {
+    background-color: #e3f2fd; // blu chiaro
+    color: #0d47a1;             // testo blu profondo
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+    user-select: none;
+  }
+
+  .chip:hover {
+    background-color: #bbdefb; // blu più acceso al hover
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .back-button {
+    font-weight: 600;
+    color: #1976d2;
+    font-family: 'Fira Code', monospace;
+  }
+
+  // Responsive
+  @media (max-width: 600px) {
+    padding: 20px 10px;
+
+    .description,
+    .dettagli {
+      font-size: 1rem;
+    }
+
+    .chip {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+    }
+
+    .links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
