@@ -2,15 +2,14 @@
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #0d47a1; /* blu scuro tech */
-  color: #e3f2fd; /* azzurro chiaro */
+  background: #0a2a49; // blu navy profondo
+  color: #e3f2fd; // testo chiaro
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.4);
-  
+
   h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    font-family: 'Roboto Mono', monospace; /* vibe nerd */
+    font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     letter-spacing: 1.2px;
   }
@@ -22,23 +21,41 @@
 
     mat-form-field {
       width: 100%;
-      background: #1565c0; /* blu medio */
-      border-radius: 8px;
 
-      input, textarea {
-        color: #e3f2fd;
-        font-family: 'Roboto Mono', monospace;
+      .mat-form-field-outline {
+        color: #64b5f6;
       }
 
       .mat-form-field-label {
         color: #bbdefb !important;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      input, textarea {
+        color: #e3f2fd;
+        background-color: transparent;
+        font-family: 'Roboto Mono', monospace;
+        caret-color: #00e5ff;
       }
 
       .mat-error {
         font-size: 0.85rem;
-        color: #ff5252; /* rosso error */
+        color: #ff5252;
         font-family: 'Roboto Mono', monospace;
       }
+    }
+
+    .success-message {
+      margin: 1rem 0;
+      padding: 12px 20px;
+      background-color: #00c853;
+      color: white;
+      font-weight: 700;
+      font-family: 'Roboto Mono', monospace;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 200, 83, 0.6);
+      text-align: center;
+      font-size: 1.1rem;
     }
 
     button {
@@ -47,16 +64,16 @@
       font-weight: 700;
       letter-spacing: 1.1px;
       font-family: 'Roboto Mono', monospace;
-      box-shadow: 0 5px 15px rgba(21, 101, 192, 0.5);
-      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(100, 181, 246, 0.3);
+      background-color: #1565c0;
 
       &:hover:not(:disabled) {
-        background-color: #003c8f;
-        box-shadow: 0 8px 25px rgba(0, 60, 143, 0.8);
+        background-color: #0d47a1;
+        box-shadow: 0 8px 25px rgba(21, 101, 192, 0.6);
       }
 
       &:disabled {
-        background-color: #4f83cc;
+        background-color: #78909c;
         cursor: not-allowed;
       }
     }

@@ -31,6 +31,8 @@ export class Home implements OnInit {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  
+
   ngOnInit(): void {
     this.breakpointObserver.observe([
       Breakpoints.XSmall,

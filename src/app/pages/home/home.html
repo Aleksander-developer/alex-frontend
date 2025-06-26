@@ -3,27 +3,24 @@
   <div class="hero-content">
     <h1>Ciao, sono Aleksander 👨‍💻</h1>
     <p>Frontend & Backend Developer appassionato di tecnologia e codice pulito.</p>
-    <button mat-stroked-button color="primary" routerLink="/contatti">Contattami</button>
+    <button mat-stroked-button color="primary" routerLink="/contatti" aria-label="Contattami">Contattami</button>
   </div>
 </section>
 
 <!-- TECH STACK SECTION -->
 <section class="tech-section">
   <h2 class="section-title">Competenze Tecnologiche</h2>
-  <mat-grid-list cols="4" rowHeight="100px" gutterSize="16px" class="tech-grid">
-    <mat-grid-tile *ngFor="let tech of techList" class="tech-tile">
-      <mat-card class="mat-elevation-z2">
-        <mat-card-content class="tech-content">
-          {{ tech }}
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="tech-grid">
+    <mat-card *ngFor="let tech of techList" class="tech-tile mat-elevation-z2">
+      <mat-card-content class="tech-content">{{ tech }}</mat-card-content>
+    </mat-card>
+  </div>
 </section>
 
 
+
 <!-- FEATURED PROJECTS SECTION -->
-<section class="featured-projects-section">
+<!-- <section class="featured-projects-section">
   <h2 class="section-title">Progetti in Evidenza</h2>
   <div class="projects-grid">
     <mat-card *ngFor="let project of featuredProjects" class="project-card mat-elevation-z3">
@@ -39,7 +36,7 @@
       </mat-card-actions>
     </mat-card>
   </div>
-</section>
+</section> -->
 
 
 <!-- CTA SECTION -->

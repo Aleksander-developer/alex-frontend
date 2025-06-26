@@ -47,34 +47,46 @@
     font-family: 'Fira Code', monospace;
   }
 
+  // Griglia flessibile CSS Grid per tech
   .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
     max-width: 1000px;
     margin: 0 auto;
   }
 
-  .tech-tile mat-card {
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      border-color: #0ff;
-      box-shadow: 0 0 10px #0ff8;
-    }
-  }
-
-  .tech-content {
-    font-weight: 500;
-    font-family: 'Fira Code', monospace;
+  .tech-tile {
     text-align: center;
-    line-height: 60px;
-    font-size: 1.1rem;
-    color: #212121;
-    transition: color 0.3s ease, transform 0.3s ease;
-    cursor: default;
 
-    &:hover {
-      color: #0ff;
-      transform: scale(1.1);
+    mat-card {
+      border: 1px solid #ccc;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      height: 100%; // fa prendere tutta l'altezza possibile nella griglia
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .tech-content {
+      font-weight: 500;
+      font-family: 'Fira Code', monospace;
+      text-align: center;
+      line-height: 1.4;
+      font-size: 1.1rem;
+      color: #212121;
+      transition: color 0.3s ease, transform 0.3s ease;
+      cursor: default;
+
+      white-space: normal;       /* permette wrapping */
+      word-wrap: break-word;     /* spezza parole troppo lunghe */
+      overflow-wrap: break-word; /* compatibilità */
+
+      &:hover {
+        color: #0ff;
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -118,15 +130,14 @@
   }
 
   .tech-content {
-    font-size: 0.9rem;
-    line-height: 40px;
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
   .cta-section h2 {
     font-size: 1.5rem;
   }
 }
-
 
 // FEATURED PROJECTS SECTION
 .featured-projects-section {

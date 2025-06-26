@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
-// Modello dell'interfaccia progetto (puoi personalizzarla meglio)
 export interface Progetto {
   _id: string;
   titolo: string;
@@ -13,7 +12,6 @@ export interface Progetto {
   immagineUrl: string;
   linkGitHub?: string;
   linkDemo?: string;
-  // Aggiungi altri campi se servono
 }
 
 @Injectable({
@@ -25,15 +23,23 @@ export class ProgettoService {
   constructor(private http: HttpClient) {}
 
   getProgetti(): Observable<Progetto[]> {
-    return this.http.get<Progetto[]>(this.apiUrl);
+    return this.http.get<Progetto[]>(`${this.apiUrl}/progetti`);
   }
 
   getProgettoById(id: string): Observable<Progetto> {
-    return this.http.get<Progetto>(`${this.apiUrl}/${id}`);
+    return this.http.get<Progetto>(`${this.apiUrl}/progetti/${id}`);
   }
 
-  // (Facoltativi per dopo) Crea, aggiorna, elimina
-  // createProgetto(data: Partial<Progetto>): Observable<Progetto> { ... }
-  // updateProgetto(id: string, data: Partial<Progetto>): Observable<Progetto> { ... }
-  // deleteProgetto(id: string): Observable<void> { ... }
+  // Per futura estensione (facoltativi)
+  // createProgetto(data: Partial<Progetto>): Observable<Progetto> {
+  //   return this.http.post<Progetto>(`${this.apiUrl}/progetti`, data);
+  // }
+
+  // updateProgetto(id: string, data: Partial<Progetto>): Observable<Progetto> {
+  //   return this.http.put<Progetto>(`${this.apiUrl}/progetti/${id}`, data);
+  // }
+
+  // deleteProgetto(id: string): Observable<void> {
+  //   return this.http.delete<void>(`${this.apiUrl}/progetti/${id}`);
+  // }
 }
