@@ -1,3 +1,4 @@
+// AlexFEDeveloper/src/app/pages/progetti.ts
 import { Component, OnInit } from '@angular/core';
 import { Progetto, ProgettoService } from '../../shared/services/progetto.service';
 

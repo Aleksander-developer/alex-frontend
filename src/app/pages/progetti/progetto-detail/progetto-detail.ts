@@ -1,3 +1,4 @@
+// AlexFEDeveloper/src/app/pages/progetti/progetto-detail.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProgettoService } from '../../../shared/services/progetto.service';

@@ -1,3 +1,4 @@
+// AlexFEDeveloper/src/app/pages/progetti.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Progetti } from './progetti';
